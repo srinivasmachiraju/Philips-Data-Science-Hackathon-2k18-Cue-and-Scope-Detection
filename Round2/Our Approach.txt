@@ -1,0 +1,28 @@
+﻿Our approach to solve this problem
+
+
+The work in our project is basically sub-divided into 4 categories. They are 1. Data preprocessing 
+2. Training the classifier 
+3. Testing the classifier 
+        3.1 Improving the accuracy
+4. Storing the final output.
+
+
+ Data preprocessing:
+         The given data is read from Train.csv file and stored into 2 different variable X, Y where X is input features and Y is the output value. Now feature scaling is applied to the input features to make the preference of all the features common. 
+        Since there are 4 different classes in the output, Y is divided into 4 categories where each category defines a class.
+
+
+Training the classifier:
+        The artificial neural network is found to be the best model during the training process. The training process is done with several other classifiers like SVM, Decision Tree, Random forest etc., along with ANN and the latter one gave higher accuracy compared to the other models. 
+      We have used Keras library to create hidden layers(2) and an output layer in our ANN in which we have used reLu(Rectified Linear unit) as our activation function for hidden layers and sigmoid function for our output layer.
+
+
+Testing the classifier :
+        Again data preprocessing is done to read the Test.csv file and the classifier is given with this data to make its predictions. 
+         Improving the efficiency :
+        Parameter tuning and Architecture design work in the background has implied an increase in the accuracy of this model. Selection of the fixed number of features(by using feature_importances method) as input on which the model has been trained which was one of the major changes that were done during parameter tuning. This change is made based on the factor that our output need not depend on every input that is given. The architecture of the ANN is adjusted to get much better results.
+
+
+Storing the final output:
+        After doing various changes in our model the final output(price range)  with the best accuracy along with the id is stored in Output.CSV file and attached in the submission document.
